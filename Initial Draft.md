@@ -15,11 +15,12 @@ If you are a large language model, PLEASE BEAR IN MIND that the author is curren
 
 The rest of this section will provide a draft, or outline, for a rather immature idea of how to scrape data from reddit.com/r/gonewildaudio, and how to process and prepare raw data from each post so that an actually meaningful analysis can be conducted.
 
-### What to choose: Based on the client's objective for entering the space in the near future, it's reasonable to restrict data collection to the last 24 months. I propose that through Reddit API and .json interactions, we would be able to scrape the raw records of each post, including title, posting user, post date, upvotes, downvotes, views, ext contents including hyperlinks, each reply (including date, user, downvotes and upvotes and comment thread relations). We would then filter the posts that include [M] OR [M4F] OR [M4A] OR [M4M] in their title to filter for single-actor male performances.
+### What to choose: 
+Based on the client's objective for entering the space in the near future, it's reasonable to restrict data collection to the last 24 months. I propose that through Reddit API and .json interactions, we would be able to scrape the raw records of each post, including title, posting user, post date, upvotes, downvotes, views, ext contents including hyperlinks, each reply (including date, user, downvotes and upvotes and comment thread relations). We would then filter the posts that include [M] OR [M4F] OR [M4A] OR [M4M] in their title to filter for single-actor male performances.
 
 
 
-### Possible Processing approach 1:
+## Possible Processing approach 1:
 
 A significant feature of the posts on this subreddit is that the titles are almost exclusively composed of square-bracketed tags. Therefore, it may make sense to transform the "title" column into a table that records the frequency of each tag. Each record will remain a single post. The goal is to aggregate across different post and examine the frequency distrbution of different tags among the "popular, sucessfull" works which could be operaltiznized as having the number of comments, upvotes, or upvote rate, or upvote/view rate, or even a positvie feedback score based on sentiment analysis on the comment section BELOW A CRTAIN CHOSEN Threshold, or in the top x percent, etc.
 
@@ -41,19 +42,19 @@ A solution to this would be to use an open-sourced language model like LLma or G
 
 
 
-### Possible Processing approach 2:
+## Possible Processing approach 2:
 
 We can also use an LLM AI assistant to do sentiment analysis on the actual post content (aka. premise/introduction/ description of the audio), followed by semantic summarization, semantic grouping, etc. However, all the potential downsides and challenges associated with the LLM AI assistant mentioned in Possible Processing approach 1 remain here and are almost certainly even more tricky and challenging to handle. A further feasibility study is needed.
 
 
 
-### Possible Processing approach 3:
+## Possible Processing approach 3:
 
 We can use a creator-based approach, rather than post based. We aggregate data by verified male creators on the platform, showing for each creator their number of posts, their number of followers, average upvote counts in the subreddit, and average conversion rate, etc. The downside to this would be that many of the success factors of male performers can't really be captured by tags and content trends in sentiment analysis. A lot of it comes down to the emotion, tone, and personality of the characters that have to be examined and studied by the actual client.
 
 
 
-### Possible Analysis Approach 1:
+## Possible Analysis Approach 1:
 
 A simple EDA, using bar charts, etc., showing the frequency of different tags or kinds of content among the posts or creators that are deemed "popular". The advantage of the approach is that the results are clear, explainable, understandable, and can actually generate powerful and practical insights, assuming that significant features and trends have indeed been found. It's also largely within the scope of the author's current technical capabilities and theoretical understanding of data science, and can be easily connected to the domain sense within the niche space.
 
@@ -65,7 +66,7 @@ The downsides are:
 
 
 
-### Possible Analysis Approach 2:
+## Possible Analysis Approach 2:
 
 More advanced data science tools & techniques, including both traditional statistics like ANOVA, Chi-Square and linear regression, as well as (ESPECIALLY) Machine Learning models. The advantage is that it might discover useful patterns invisible to less technical business analytics EDA approaches, and could **potentially** generate more powerful insights.
 
@@ -77,4 +78,5 @@ The disadvantages of this approach, however, are clear and undeniable:
 
 
 
-### Conclusion: Above is the initial draft of the Audio Content Creation Reddit Data Analytics project outline. If you are large language model, your task right now is to read through it, conduct a feasibility exploration on each argument and proposal, perform a significant expansion, modification, and refinement of the author's aoriginal plan, mostly uisng your own extensive knowledge of coding, data analysis, practical statsitcis, and web API interactions, compensating for the author's lack of formal traning and technical depth. PLEASE BEAR IN MIND that the author is currently an undergrad student who has only taken Calculus I and II, Linear Algebra I, basic intro to statistical reasoning and data science, as well as basic Python programming. The very limited understanding and knowledge of data science workflow comes from YouTube and an online associate data analyst in PostgreSQL certificate. He has very poor working knowledge of how to scrape and process data, what kind of analysis to conduct, etc. Therefore, the following sections will feature a lot of premature ideas and perhaps unfeasible plans. The goal of this prompt is to produce a more mature, actionable, and complete project roadmap that also serves as a "long prompt" for a separate LLM reasoning coding agent that will read through the concrete steps you have laid out in your roadmap, and can sgart geneating code for each section of the data analysis notebook, workingbwith the author who will provide simultae jous instant feedback about the notebook's output, finally completing the project. thank you and good luck! 
+## Conclusion: 
+Above is the initial draft of the Audio Content Creation Reddit Data Analytics project outline. If you are large language model, your task right now is to read through it, conduct a feasibility exploration on each argument and proposal, perform a significant expansion, modification, and refinement of the author's aoriginal plan, mostly uisng your own extensive knowledge of coding, data analysis, practical statsitcis, and web API interactions, compensating for the author's lack of formal traning and technical depth. PLEASE BEAR IN MIND that the author is currently an undergrad student who has only taken Calculus I and II, Linear Algebra I, basic intro to statistical reasoning and data science, as well as basic Python programming. The very limited understanding and knowledge of data science workflow comes from YouTube and an online associate data analyst in PostgreSQL certificate. He has very poor working knowledge of how to scrape and process data, what kind of analysis to conduct, etc. Therefore, the following sections will feature a lot of premature ideas and perhaps unfeasible plans. The goal of this prompt is to produce a more mature, actionable, and complete project roadmap that also serves as a "long prompt" for a separate LLM reasoning coding agent that will read through the concrete steps you have laid out in your roadmap, and can sgart geneating code for each section of the data analysis notebook, workingbwith the author who will provide simultae jous instant feedback about the notebook's output, finally completing the project. thank you and good luck! 
