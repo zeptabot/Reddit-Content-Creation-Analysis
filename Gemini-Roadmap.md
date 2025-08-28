@@ -2,7 +2,7 @@
 
 ### **Project Objective:**
 
-To analyze the last 24 months of male-performed posts on r/gonewildaudio to identify the tags, content characteristics, and posting strategies that are most strongly correlated with audience engagement. The final deliverable will be a set of actionable recommendations for a new 20M male creator looking to enter the space.
+To analyze all of male-performed posts on r/gonewildaudio to identify the tags, content characteristics, and posting strategies that are most strongly correlated with audience engagement. The final deliverable will be a set of actionable recommendations for a new 20M male creator looking to enter the space.
 
 ### **Guiding Principles for this Roadmap:**
 
