@@ -1,6 +1,6 @@
 # Important Notices
 
-1. To reproduce the project using the notebook, you must work within a Google Colab environment and have your own Reddit PRAW API developer app credentials, as the notebook utilized my own ones as well as Google Colab's unique function of storing the secrets in Google user secrets.
+1. To reproduce the project using the notebook, you must use a **Google Colab** environment and possess **your own Reddit PRAW API credentials** (obtained by creating a Reddit developer application). The notebook relies on these credentials for authentication and utilizes Google Colab's **User Secrets** feature to securely store and access them. My personal credentials were used in the original implementation and are not shared.
 
 2. The project and report contain heavily explicit and NSFW language that could potentially be triggering. Please double-check your environment before scrolling down.
 
