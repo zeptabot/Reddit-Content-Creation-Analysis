@@ -89,6 +89,8 @@ For a new 20-something male creator entering the erotica audio space:
 
 These insights can guide content calendars, tag strategies, and A/B testing to accelerate growth in the erotica influencer niche.
 
+A more detailed summary report that includes technical terms can be found here : ![REPORT.md](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/REPORT.md).
+
 ## How to Reproduce or Extend the Project
 
 Refer to the notice at the top for setup requirements. Open [Workflow.ipynb](Workflow.ipynb) in Google Colab, input your Reddit API credentials, and run the cells sequentially. The notebook includes all code for data fetching, analysis, and visualization.
