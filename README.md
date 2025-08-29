@@ -50,40 +50,40 @@ The analysis revealed distinct thematic clusters within male-performed erotica a
 
 - **Top Tags per Cluster**: Each cluster has unique tag profiles, highlighting niche preferences.
   
-  ![Top Tags per Cluster Subplots](images/top_tags_per_cluster.png)
+  ![Top Tags per Cluster Subplots](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(4).png)
 
 - **Word Clouds**: Visual representations of frequent tags (excluding common ones like [M4F]) for each cluster.
   
-  ![Word Cloud for Cluster 0](images/wordcloud_cluster_0.png)
-  ![Word Cloud for Cluster 1](images/wordcloud_cluster_1.png)
-  ![Word Cloud for Cluster 2](images/wordcloud_cluster_2.png)
-  ![Word Cloud for Cluster 3](images/wordcloud_cluster_3.png)
-  ![Word Cloud for Cluster 4](images/wordcloud_cluster_4.png)
-  ![Word Cloud for Cluster 5](images/wordcloud_cluster_5.png)
-  ![Word Cloud for Cluster 6](images/wordcloud_cluster_6.png)
-  ![Word Cloud for Cluster 7](images/wordcloud_cluster_7.png)
-  ![Word Cloud for Cluster 8](images/wordcloud_cluster_8.png)
-  ![Word Cloud for Cluster 9](images/wordcloud_cluster_9.png)
+  ![Word Cloud for Cluster 0](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(5).png)
+  ![Word Cloud for Cluster 1](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(6).png)
+  ![Word Cloud for Cluster 2](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(7).png)
+  ![Word Cloud for Cluster 3](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(8).png)
+  ![Word Cloud for Cluster 4](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(9).png)
+  ![Word Cloud for Cluster 5](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(10).png)
+  ![Word Cloud for Cluster 6](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(11).png)
+  ![Word Cloud for Cluster 7](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(12).png)
+  ![Word Cloud for Cluster 8](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(13).png)
+  ![Word Cloud for Cluster 9](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(14).png)
 
 - **Engagement Metrics**:
   - Median upvotes and variance were calculated per cluster.
   - High-variance clusters indicate "boom or bust" potential, while low-variance ones suggest consistent performance.
   
-  ![Variance Bar Chart](images/variance_per_cluster.png)
-  ![Box Plot of Upvote Counts](images/boxplot_upvotes.png)
+  ![Variance Bar Chart](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(15).png)
+  ![Box Plot of Upvote Counts]([images/boxplot_upvotes.png](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(16).png))
 
 Notable trends:
 - **Gentle & Sensual Themes** (Clusters 0 and 4): Tags like "praise," "missionary," "gentlemdom." High median scores (e.g., 5442), low variance—reliable "safe bets" with less competition.
-- **Rough Dominance** (Clusters 7 and 2): Tags like "mdom," "degradation," "rough." Highest potential rewards but high variance and competition.
+- **Rough Dominance** (Clusters 7 and 2): Tags like "mdom," "degradation," "rough." Highest potential rewards but high variance, fierce competition and lower overall popularity with extreme outliers.
 - **Male Submissive** (Cluster 6): Tags like "msub," "begging." Lower median engagement, mixed results—potentially suboptimal for broad popularity.
 
 Overall, 1807 distinct tags were identified, with [M4F] being ubiquitous.
 
 ## Actionable Insights for Stakeholders
 
-For a new 20-something male performer entering the erotica audio space:
-- **Start Safe**: Focus on gentle and sensual content (Clusters 0 and 4) for consistent engagement and lower risk. Incorporate tags like "gentlemdom," "praise," and "kissing" to build an audience.
-- **Pursue High Rewards**: Experiment with rough dominance themes (Clusters 7 and 2) for viral potential, using tags like "mdom," "choking," and "degradation." Be prepared for variability.
+For a new 20-something male creator entering the erotica audio space:
+- **Start Safe**: Focus on gentle and sensual content (Clusters 0 and 4) for consistently high engagement. Incorporate tags like "gentlemdom," "praise," and "kissing" to build an audience.
+- **Pursue High Rewards**: Experiment with rough dominance themes (Clusters 7 and 2) for viral potential, using tags like "mdom," "choking," and "degradation." Be prepared for "gloom or doom" performances and intense competition.
 - **Approach with Caution**: Male submissive content (Cluster 6) shows lower average performance; use it sparingly or blend with other themes.
 - **General Tips**: All analyzed posts are top-performers (min 2500 upvotes), so emulate their structure. Post during peak times, use descriptive titles, and monitor trends. Continuously adapt based on audience feedback—Reddit's NSFW space evolves quickly.
 
