@@ -46,7 +46,7 @@ The analysis revealed distinct thematic clusters within male-performed erotica a
 
 - **Cluster Distribution**: Posts were unevenly distributed across 10 clusters, with some themes (e.g., rough dominance) dominating in volume.
   
-  ![Cluster Distribution Bar Chart](images/cluster_distribution.png)
+  ![Cluster Distribution Bar Chart](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(3).png)
 
 - **Top Tags per Cluster**: Each cluster has unique tag profiles, highlighting niche preferences.
   
