@@ -70,7 +70,7 @@ The analysis revealed distinct thematic clusters within male-performed erotica a
   - High-variance clusters indicate "boom or bust" potential, while low-variance ones suggest consistent performance.
   
   ![Variance Bar Chart](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(15).png)
-  ![Box Plot of Upvote Counts]([images/boxplot_upvotes.png](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(16).png))
+  ![Box Plot of Upvote Counts](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/images/download%20(16).png)
 
 Notable trends:
 - **Gentle & Sensual Themes** (Clusters 0 and 4): Tags like "praise," "missionary," "gentlemdom." High median scores (e.g., 5442), low variance—reliable "safe bets" with less competition.
