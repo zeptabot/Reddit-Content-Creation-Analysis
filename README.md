@@ -10,7 +10,7 @@
 
 As a freelance data analyst, I recently completed a project for a client pivoting into the content creation space, specifically focusing on audio erotica for platforms like Reddit's r/gonewildaudio subreddit. This analysis examines high-performing male-performed audio posts to uncover patterns in themes, tags, and engagement metrics. The goal is to provide actionable recommendations for new creators, such as a 20-something male performer, to optimize content strategy and maximize audience reach.
 
-The full workflow is documented in the Jupyter notebook [Workflow.ipynb](Workflow.ipynb), which I've made open-source on GitHub for transparency and community benefit. This README serves dual purposes:
+The full workflow is documented in the Jupyter notebook [Workflow.ipynb](https://github.com/zeptabot/Reddit-Content-Creation-Analysis/blob/main/Workflow.ipynb), which I've made open-source on GitHub for transparency and community benefit. This README serves dual purposes:
 - **Introduction to the Project**: A technical overview for developers or analysts interested in reproducing or extending the work.
 - **Delivery-Oriented Report**: A high-level summary tailored for non-technical stakeholders, such as content creators, marketers, or clients, emphasizing key insights without deep dives into code.
 
