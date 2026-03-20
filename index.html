@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Content Strategy via ML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f4c81; /* Professional academic blue */
+            --secondary: #e2e8f0;
+            --accent: #38bdf8;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --bg-color: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-color);
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+            background: radial-gradient(circle at top right, #ffffff 0%, #f1f5f9 100%);
+        }
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 10;
+        }
+
+        /* Header Styles */
+        .slide-header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        .slide-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Content Styles */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .content ul {
+            list-style-type: none;
+        }
+
+        .content li {
+            margin-bottom: 25px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .content li i {
+            position: absolute;
+            left: 0;
+            top: 6px;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Slide 1 Specific (Title) */
+        .slide-title-wrapper {
+            text-align: center;
+            margin: auto;
+        }
+
+        .slide-title-wrapper h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .slide-title-wrapper h3 {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .tech-badge {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            height: 100%;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+        }
+
+        .card h4 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            z-index: 20;
+            color: var(--text-light);
+            font-size: 1rem;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .progress-indicator {
+            font-weight: 600;
+        }
+
+        kbd {
+            background-color: #eee;
+            border-radius: 3px;
+            border: 1px solid #b4b4b4;
+            box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 2px 0 0 rgba(255,255,255,.7) inset;
+            color: #333;
+            display: inline-block;
+            font-size: .85em;
+            font-weight: 700;
+            line-height: 1;
+            padding: 2px 4px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active" id="slide-1">
+            <div class="slide-title-wrapper">
+                <h1>Optimizing Content Strategy via Unsupervised Machine Learning</h1>
+                <h3>A Data-Driven Analysis of Niche User-Generated Audio Markets</h3>
+                <p style="font-size: 1.3rem; color: var(--text-main); font-weight: 600; margin-top: 20px;">Prepared by: Brad Xu</p>
+                
+                <div class="tech-stack" style="margin-top: 60px;">
+                    <div class="tech-badge"><i class="fab fa-python"></i> Python</div>
+                    <div class="tech-badge"><i class="fas fa-database"></i> API Extraction</div>
+                    <div class="tech-badge"><i class="fas fa-brain"></i> NLP & Clustering</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Pipeline -->
+        <div class="slide" id="slide-2">
+            <div class="slide-header">
+                <h2>1. Data Acquisition & Engineering Pipeline</h2>
+            </div>
+            <div class="content">
+                <ul>
+                    <li><i class="fas fa-network-wired"></i> <strong>API Extraction:</strong> Utilized the Reddit PRAW API to scrape historical performance data from a highly active, niche audio roleplay community.</li>
+                    <li><i class="fas fa-filter"></i> <strong>Demographic Filtering:</strong> Ingested the top 3,000 all-time posts (baseline > 2,500 upvotes), algorithmically parsing custom tag syntaxes to isolate 291 records matching the client's specific target demographic.</li>
+                    <li><i class="fas fa-broom"></i> <strong>Data Preprocessing:</strong> Leveraged <span class="highlight">Pandas</span> to format timestamps, extract metadata, calculate title length distributions, and standardize unstructured user-generated text tags into a clean dataset.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 3: ML Methodology -->
+        <div class="slide" id="slide-3">
+            <div class="slide-header">
+                <h2>2. NLP & Unsupervised Machine Learning</h2>
+            </div>
+            <div class="content">
+                <p style="margin-bottom: 30px;"><strong>Objective:</strong> Categorize unstructured text tags into actionable thematic content buckets.</p>
+                
+                <div class="two-col">
+                    <div class="card">
+                        <h4><i class="fas fa-file-word"></i> Vectorization (TF-IDF)</h4>
+                        <p style="font-size: 1.2rem; margin-top: 10px;">Converted string tags into numerical matrices using <strong>Term Frequency-Inverse Document Frequency</strong>. This mathematically penalized overly ubiquitous tags while highlighting the unique terms that define specific sub-niches.</p>
+                    </div>
+                    <div class="card">
+                        <h4><i class="fas fa-project-diagram"></i> Clustering (K-Means)</h4>
+                        <p style="font-size: 1.2rem; margin-top: 10px;">Applied the <strong>K-Means algorithm</strong> via Scikit-Learn to segment the vectorized data into 10 distinct thematic clusters, grouping similar content archetypes purely based on their mathematical distance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Statistical Insights -->
+        <div class="slide" id="slide-4">
+            <div class="slide-header">
+                <h2>3. Statistical Analysis & Market Dynamics</h2>
+            </div>
+            <div class="content">
+                <p style="margin-bottom: 20px;">By analyzing engagement metrics within clusters, I looked beyond averages and focused on <strong>Statistical Variance</strong> to define market strategies:</p>
+                <ul>
+                    <li><i class="fas fa-shield-alt"></i> <strong>The "Safe Bet" Strategy:</strong> Certain thematic clusters demonstrated high median engagement paired with <span class="highlight">low variance</span>. These represent reliable baseline growth with a low risk of underperformance.</li>
+                    <li><i class="fas fa-chart-line"></i> <strong>The "Viral" Strategy:</strong> Other clusters had extreme outliers and <span class="highlight">high variance</span>. These offer massive peak potential (high reward) but signify intense competition and a higher risk of failing to capture the audience.</li>
+                    <li><i class="fas fa-arrow-down"></i> <strong>Suboptimal Niches:</strong> Clusters with consistently low median scores and tight variance, indicating a fundamentally smaller total addressable market.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 5: Conclusion -->
+        <div class="slide" id="slide-5">
+            <div class="slide-header">
+                <h2>4. Project Impact & Reproducibility</h2>
+            </div>
+            <div class="content">
+                <ul>
+                    <li><i class="fas fa-map-signs"></i> <strong>Actionable Roadmap:</strong> Translated abstract NLP clusters into a concrete, data-driven content strategy for the client to balance reliable growth with viral experimentation.</li>
+                    <li><i class="fas fa-code-branch"></i> <strong>Full Reproducibility:</strong> Engineered the entire end-to-end pipeline into a documented, open-source Jupyter Notebook (Google Colab).</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Relevance to RA Role:</strong> Demonstrates independent capability to extract raw data via APIs, apply standard machine learning techniques to find hidden patterns, and communicate complex statistical dynamics (like variance) to stakeholders.</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 40px; font-weight: bold; color: var(--primary);">
+                    Thank You! Happy to discuss the pipeline or methodology in more detail.
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <span>Use <kbd>←</kbd> <kbd>→</kbd> to navigate</span>
+            <span class="progress-indicator">Slide <span id="current-slide">1</span> / 5</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const slideIndicator = document.getElementById('current-slide');
+            let currentSlideIndex = 0;
+
+            function updateSlides() {
+                slides.forEach((slide, index) => {
+                    if (index === currentSlideIndex) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+                slideIndicator.innerText = currentSlideIndex + 1;
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === ' ') {
+                    if (currentSlideIndex < slides.length - 1) {
+                        currentSlideIndex++;
+                        updateSlides();
+                    }
+                } else if (e.key === 'ArrowLeft') {
+                    if (currentSlideIndex > 0) {
+                        currentSlideIndex--;
+                        updateSlides();
+                    }
+                }
+            });
+            
+            // Allow clicking on the right/left side of the screen to navigate
+            document.querySelector('.presentation-container').addEventListener('click', (e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const x = e.clientX - rect.left; // x position within the element.
+                if (x > rect.width / 2) {
+                     if (currentSlideIndex < slides.length - 1) {
+                        currentSlideIndex++;
+                        updateSlides();
+                    }
+                } else {
+                     if (currentSlideIndex > 0) {
+                        currentSlideIndex--;
+                        updateSlides();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
